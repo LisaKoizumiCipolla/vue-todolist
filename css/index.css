@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    padding: 50px 0px;
+    text-align: center;
+}
+
+main{
+    margin: 0 auto;
+}
+
+.container{
+    width: 70%;
+}
+
+.list {
+    width: 500px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    background-color: rgb(160, 212, 195);
+    padding: 20px 10px;
+    border: 1px solid rgb(175, 175, 175);
+}
