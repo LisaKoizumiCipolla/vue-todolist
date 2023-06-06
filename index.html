@@ -27,7 +27,7 @@
                     </ul>
                 </div>
                 <div class="add-new-item d-flex justify-content-center">
-                    <input type="text" class="input-bar" v-model="newListElement">
+                    <input type="text" class="input-bar" v-model="newListElement" @keyup.enter="addNewListElement(newListElement)">
                     <button @click="addNewListElement(newListElement)">Add new stuff to do</button>
                 </div>
             </div>
