@@ -11,11 +11,11 @@ createApp({
                 },
                 {
                     text : "Riporta in auge la spatha",
-                    done : true,
+                    done : false,
                 },
                 {
                     text : "Portare lo zweihänder in parata",
-                    done : true,
+                    done : false,
                 },
                 {
                     text : "Riparare l'asta della guisarma",
@@ -33,7 +33,8 @@ createApp({
                     text : "Sezionare il gaesum",
                     done : true,
                 },
-            ]
+            ],
+            newListElement : "",
         }
     },
     methods:{
@@ -41,13 +42,24 @@ createApp({
             this.toDoList.splice(elementIndex, 1);
         },
 
-        addNewListElement(newListElement){
+        addNewListElement(){
             if (this.newListElement !== ""){
-                this.toDoList.push({text:newListElement, done:false});
+                this.toDoList.push({text:this.newListElement, done:false});
                 this.newListElement= "";
             }
-        }
+        },
+
+        textDecorationToggle(){
+            if(this.newListElement.done !== false){
+                this.newListElement.done = true;
+                console.log("You still have to do that");
+            } else {
+                this.newListElement.done = false;
+                console.log("You already did it");
+            }
+        },
     },
+
 
 
 }).mount("#vue");

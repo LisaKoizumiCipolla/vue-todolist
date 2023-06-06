@@ -31,6 +31,10 @@ li {
     border: 1px solid rgb(175, 175, 175);
 }
 
+li:hover{
+    background-color: rgb(117, 218, 184);
+}
+
 .add-new-item{
     width: 100%;
 }
@@ -44,4 +48,8 @@ button {
 
 .input-bar {
     border-radius: 15px;
+}
+
+.done{
+    text-decoration: line-through;
 }

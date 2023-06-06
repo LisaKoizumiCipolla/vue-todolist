@@ -21,14 +21,14 @@
                 <div class="list">
                     <ul class="">
                         <li v-for ="(element, index) in toDoList" class="d-flex justify-content-between">
-                            <span>{{ element.text }}</span>
+                            <span :class="{done: element.done}" @click="textDecorationToggle()">{{ element.text }}</span>
                             <span @click="removeElement(index)"><i class="fa-solid fa-bomb"></i></span>
                         </li>
                     </ul>
                 </div>
                 <div class="add-new-item d-flex justify-content-center">
-                    <input type="text" class="input-bar" v-model="newListElement" @keyup.enter="addNewListElement(newListElement)">
-                    <button @click="addNewListElement(newListElement)">Add new stuff to do</button>
+                    <input type="text" class="input-bar" v-model="newListElement" @keyup.enter="addNewListElement()">
+                    <button @click="addNewListElement()">Add new stuff to do</button>
                 </div>
             </div>
         </main>
