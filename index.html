@@ -22,7 +22,7 @@
                 <div class="list">
                     <ul class="">
                         <li v-for ="(element, index) in toDoList" class="d-flex justify-content-between">
-                            <span :class="{done: element.done}" @click="textDecorationToggle()">{{ element.text }}</span>
+                            <span :class="{done: element.done}" @click="textDecorationToggle(element)">{{ element.text }}</span>
                             <span @click="removeElement(index)"><i class="fa-solid fa-bomb"></i></span>
                         </li>
                     </ul>

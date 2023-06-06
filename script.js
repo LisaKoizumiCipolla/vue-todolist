@@ -49,14 +49,8 @@ createApp({
             }
         },
 
-        textDecorationToggle(){
-            if(!this.element){
-                this.element = true;
-                console.log("You still have to do that");
-            } else {
-                this.element = false;
-                console.log("You already did it");
-            }
+        textDecorationToggle(element){
+            element.done = !element.done;
         },
     },
 
