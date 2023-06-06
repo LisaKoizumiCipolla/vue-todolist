@@ -50,11 +50,11 @@ createApp({
         },
 
         textDecorationToggle(){
-            if(!this.newListElement){
-                this.newListElement = true;
+            if(!this.element){
+                this.element = true;
                 console.log("You still have to do that");
             } else {
-                this.newListElement = false;
+                this.element = false;
                 console.log("You already did it");
             }
         },
