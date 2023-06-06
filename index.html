@@ -20,11 +20,15 @@
             <div class="container d-flex flex-column justify-content-center align-items-center">
                 <div class="list">
                     <ul class="">
-                        <li v-for ="element in toDoList" class="d-flex justify-content-between">
+                        <li v-for ="(element, index) in toDoList" class="d-flex justify-content-between">
                             <span>{{ element.text }}</span>
-                            <span><i class="fa-solid fa-bomb"></i></span>
+                            <span @click="removeElement(index)"><i class="fa-solid fa-bomb"></i></span>
                         </li>
                     </ul>
+                </div>
+                <div class="add-new-item d-flex justify-content-center">
+                    <input type="text" class="input-bar">
+                    <button @click="">Add new stuff to do</button>
                 </div>
             </div>
         </main>

@@ -30,3 +30,18 @@ li {
     padding: 20px 10px;
     border: 1px solid rgb(175, 175, 175);
 }
+
+.add-new-item{
+    width: 100%;
+}
+
+button {
+    margin-left: 10px;
+    padding: 7px 15px;
+    border-radius: 15px;
+    border: none;
+}
+
+.input-bar {
+    border-radius: 15px;
+}
