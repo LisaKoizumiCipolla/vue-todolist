@@ -39,6 +39,13 @@ createApp({
     methods:{
         removeElement(elementIndex){
             this.toDoList.splice(elementIndex, 1);
+        },
+
+        addNewListElement(newElement){
+            if (this.newListElement !== ""){
+                this.toDoList.push(newElement);
+                this.newListElement= "";
+            }
         }
     },
 
