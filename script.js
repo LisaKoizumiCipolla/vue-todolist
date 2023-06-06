@@ -23,15 +23,15 @@ createApp({
                 },
                 {
                     text : "Studiare le coreografie per il montante",
-                    done : true,
+                    done : false,
                 },
                 {
                     text : "Sostituire l'ossidiana del macuahuitl",
-                    done : true,
+                    done : false,
                 },
                 {
                     text : "Sezionare il gaesum",
-                    done : true,
+                    done : false,
                 },
             ],
             newListElement : "",
@@ -50,11 +50,11 @@ createApp({
         },
 
         textDecorationToggle(){
-            if(this.newListElement.done !== false){
-                this.newListElement.done = true;
+            if(!this.newListElement){
+                this.newListElement = true;
                 console.log("You still have to do that");
             } else {
-                this.newListElement.done = false;
+                this.newListElement = false;
                 console.log("You already did it");
             }
         },
